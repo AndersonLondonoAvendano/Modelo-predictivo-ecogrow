@@ -1,0 +1,50 @@
+IMPORTANCIA DE VARIABLES — MODELO ECOGROW
+============================================================
+
+  Salida                         Variable más determinante Importancia
+  ────────────────────────────── ──────────────────── ──────────
+  alerta_temperatura             temp                    1.0000
+
+  Detalle — alerta_temperatura:
+    temp             1.0000  ██████████████████████████████
+    hum_amb          0.0000  
+    hum_suelo        0.0000  
+    luz              0.0000  
+    hora_dia         0.0000  
+
+  alerta_luz                     luz                     0.9355
+
+  Detalle — alerta_luz:
+    luz              0.9355  ████████████████████████████
+    temp             0.0478  █
+    hora_dia         0.0167  
+    hum_amb          0.0000  
+    hum_suelo        0.0000  
+
+  alerta_humedad_ambiente        hum_amb                 1.0000
+
+  Detalle — alerta_humedad_ambiente:
+    hum_amb          1.0000  ██████████████████████████████
+    temp             0.0000  
+    hum_suelo        0.0000  
+    luz              0.0000  
+    hora_dia         0.0000  
+
+  riego                          hum_suelo               0.5544
+
+  Detalle — riego:
+    hum_suelo        0.5544  ████████████████
+    hora_dia         0.3247  █████████
+    luz              0.1209  ███
+    temp             0.0000  
+    hum_amb          0.0000  
+
+  estado_cultivo                 temp                    0.3324
+
+  Detalle — estado_cultivo:
+    temp             0.3324  █████████
+    luz              0.2691  ████████
+    hum_amb          0.2206  ██████
+    hum_suelo        0.1657  ████
+    hora_dia         0.0121  
+
