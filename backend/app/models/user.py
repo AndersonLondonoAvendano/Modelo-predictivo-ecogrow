@@ -5,13 +5,9 @@ from sqlalchemy import String, Boolean, Enum as SAEnum, DateTime, Index, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy.dialects.postgresql import UUID
 import enum
+from backend.app.models.enums.user import UserStatus
 
 from backend.app.models.base import Base
-
-
-class UserRole(str, enum.Enum):
-    user = "user"
-    admin = "admin"
 
 
 class User(Base):
@@ -23,7 +19,7 @@ class User(Base):
 
     hashed_password: Mapped[str] = mapped_column(String(255), nullable=False)
 
-    role: Mapped[UserRole] = mapped_column(SAEnum(UserRole, name="user_role"), nullable=False,default=UserRole.user)
+    role: Mapped[UserStatus] = mapped_column(SAEnum(UserStatus, name="user_role"), nullable=False,default=UserStatus.user)
 
     is_active: Mapped[bool] = mapped_column(Boolean, default=True, nullable=False)
 
